@@ -107,10 +107,9 @@ class Robo:
             elif movimento == "direita":
                 x += 1
 
-            # não entra na parede
+            
             if mapa[y][x] != "#":
 
-                # não volta para lugares antigos
                 if (x, y) not in self.memoria:
                     melhores.append(movimento)
 

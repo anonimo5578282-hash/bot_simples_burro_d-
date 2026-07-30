@@ -47,7 +47,6 @@ class Robo:
             novo_x += 1
 
 
-        # verifica se bateu na parede
         if mapa[novo_y][novo_x] != "#":
             self.x = novo_x
             self.y = novo_y

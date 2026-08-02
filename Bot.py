@@ -1,13 +1,15 @@
 
 import time
 import random
+import os
+import sys
 
 
 mapa = [
 "###############",
+"#        X    #",
+"#     #       #",
 "#             #",
-"#    ######   #",
-"#      #X     #",
 "###############"
 ]
 
@@ -15,7 +17,7 @@ class Robo:
     def __init__(self):
      self.x = 1
      self.y = 1
-     self.nome = "Jose"
+     self.nome = "José"
      self.memoria = []
      self.fome = 0
 
@@ -107,8 +109,21 @@ class Robo:
             elif movimento == "direita":
                 x += 1
 
-            
             if mapa[y][x] != "#":
+
+             if mapa[self.y][self.x] == "X":
+                print("WIN!")
+                time.sleep(1)
+                print("criado por carnagem(eu)")
+                time.sleep(1)
+                print("sistema Linux")
+                time.sleep(1)
+                print("criado em Python")
+                time.sleep(1)
+                print("demorou 1 semana para criar este bot")
+                time.sleep(1)
+                print("Obrigado por jogar!")
+                sys.exit(0)
 
                 if (x, y) not in self.memoria:
                     melhores.append(movimento)
